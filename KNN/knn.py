@@ -8,6 +8,7 @@ import pickle
 # A script using K-Nearest-Neighbour-Algorithm to classify a vehicle based on buying and maintenance price, #
 # no. of doors, capacity in terms of persons, size of luggage boot and the car's safety rating.             #
 #                                                                                                           #
+#                          This script uses the following (slightly modified) dataset:                      #
 #                            https://archive.ics.uci.edu/ml/datasets/Car+Evaluation                         #
 # --------------------------------------------------------------------------------------------------------- #
 
