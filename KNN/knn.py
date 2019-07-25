@@ -12,23 +12,27 @@ import pickle
 #                            https://archive.ics.uci.edu/ml/datasets/Car+Evaluation                         #
 # --------------------------------------------------------------------------------------------------------- #
 
+
 def show_output(predictions, x_test, y_test, model):
     """
     A function for printing the output our algorithm generates.
-    :param predictions: List[]
-    :param x_test: List[]
-    :param y_test: List[]
+    :param predictions: numpy.ndarray
+    :param x_test: numpy.ndarray
+    :param y_test: numpy.ndarray
     :param model: KNeighboursClassifier()
     :return: None
     """
+    err = 0
     for x in range(len(predictions)):
         print("Prediction: ", predictions[x])
         print("Input data: ", x_test[x])
         print("Actual Class: ", y_test[x])
         print("----")
+        if not y_test[x] == predictions[x]:
+            err += 1
 
-    print("Total Accuracy:", model.score(x_test, y_test), "equals ", round(model.score(x_test, y_test) * 100, 2),
-          "% correctly estimated.")
+    print("Total Accuracy:", round(model.score(x_test, y_test) * 100, 2),
+          "% with ", err, " errors.")
 
 
 # Read car.data like a CSV - as all values are comma separated

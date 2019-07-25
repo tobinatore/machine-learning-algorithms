@@ -32,20 +32,24 @@ def plot_scatter_diagram(data):
 def show_output(predictions, x_test, y_test, linear):
     """
     A function for printing the output our algorithm generates.
-    :param predictions: List[]
-    :param x_test: List[]
-    :param y_test: List[]
+    :param predictions: numpy.ndarray
+    :param x_test: numpy.ndarray
+    :param y_test: numpy.ndarray
     :param linear: LinearRegression()
     :return: None
     """
+    err = 0
     for x in range(len(predictions)):
         print("Prediction: ", predictions[x])
         print("Input data: ", x_test[x])
         print("Actual Final Grade: ", y_test[x])
         print("----")
 
-    print("Total Accuracy:", linear.score(x_test, y_test), "equals ", round(linear.score(x_test, y_test) * 100, 2),
-          "% correctly estimated.")
+        if not predictions[x] == y_test[x]:
+            err += 1
+
+    print("Total Accuracy:", round(linear.score(x_test, y_test) * 100, 2), "% with ", err, "errors. ")
+    print(type(y_test), type(predictions))
 
 
 def read_data(filename):
