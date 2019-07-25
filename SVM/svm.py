@@ -7,7 +7,7 @@ from sklearn import metrics
 # A script using a support-vector-machine to classify tumors as benign or malign, based on about 30 criteria #
 # such as size, growth and many more.                                                                        #
 #                                                                                                            #
-#                          This script uses the following (slightly modified) dataset:                       #
+#                                 This script uses the following dataset:                                    #
 #                                   Sklearn's own breast cancer dataset                                      #
 # ---------------------------------------------------------------------------------------------------------- #
 
