@@ -76,7 +76,8 @@ Image taken from [wikimedia](https://commons.wikimedia.org/wiki/File:Map1NNReduc
 
 **Problem solved using the algorithm:** Classifing handwritten digits.
 
-**Accuracy:** Measured on 69510 data points
+**Accuracy:**
+- inertia: 69510
 - homogeneity: ~0.61 	
 - completeness: ~0.66
 - v-measure: ~0.63 	
@@ -86,6 +87,7 @@ Image taken from [wikimedia](https://commons.wikimedia.org/wiki/File:Map1NNReduc
 
 ### Explanation:
  (can also be found as a comment in the k_means_cluster.py)
+ - **inertia:** within-cluster sum-of-squares
  - **homogeneity:** each cluster contains only members of a single class (range 0 - 1)  
 - **completeness:** all members of a given class are assigned to the same cluster (range 0 - 1)  
 - **v-measure:** harmonic mean of homogeneity and completeness  
