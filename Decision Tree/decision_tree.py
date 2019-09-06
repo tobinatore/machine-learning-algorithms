@@ -46,7 +46,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 # Creating the classifier, which will use information gain as attribute selection measure
 # and limiting the tree to a maximum depth of 4
-classifier = DecisionTreeClassifier(criterion="gini", max_depth=4)
+classifier = DecisionTreeClassifier(criterion="entropy", max_depth=4)
 
 classifier = classifier.fit(X_train, y_train)
 

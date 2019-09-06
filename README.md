@@ -34,7 +34,9 @@ Image taken from [wikimedia](https://commons.wikimedia.org/wiki/File:Linear_regr
 
 Besides predicting the final grade of a student, the linear_regression.py can also plot the relationship between two sets of data.
 
-**Accuracy:** ~75% to ~90%
+**Accuracy:** R²-Score of ~0.75 - ~0.9
+
+In the linear_regression directory you can also find the linear_regression_no_lib.py which is my implementation of linear regression without using sklearn.
 
 <a id="knn"></a>
 ## K-Nearest Neighbour

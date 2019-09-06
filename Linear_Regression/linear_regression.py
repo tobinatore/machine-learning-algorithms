@@ -21,7 +21,7 @@ def plot_scatter_diagram(data):
     :param data: DataFrame
     :return: None
     """
-    att = "G1"
+    att = "failures"
     style.use("ggplot")
     pyplot.scatter(data[att], data["G3"])
     pyplot.xlabel(att)
@@ -48,7 +48,7 @@ def show_output(predictions, x_test, y_test, linear):
         if not predictions[x] == y_test[x]:
             err += 1
 
-    print("Total Accuracy:", round(linear.score(x_test, y_test) * 100, 2), "% with ", err, "errors. ")
+    print("Total Accuracy (R²-Score):", linear.score(x_test, y_test))
     print(type(y_test), type(predictions))
 
 
