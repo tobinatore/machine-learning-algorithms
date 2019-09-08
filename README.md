@@ -20,6 +20,7 @@ Additionally, if you want a graphical reprentation of the decision tree, you'll 
  3. [Support Vector Machine](#svm)
  4. [K-Means Clustering](#k-means)
  5. [Decision Trees](#dec-trees)
+ 6. [Neural Networks](#nn)
 
    <a id="lin-reg"></a>
 ## Linear Regression
@@ -114,3 +115,20 @@ Image generated using decision_tree.py.
 - **~78%** with a depth of *4* and *information gain* as attribute selection measure
 - **~76%** with a depth of *3* and *information gain* as attribute selection measure
 - **~76%** with a depth of *4* and *gini impurity* as attribute selection measure
+
+<a id="nn"></a>
+## Neural Networks
+![A network with the topology 4-10-3](https://i.gyazo.com/c9e40613d43415769cb5f5544d1b580f.png)  
+The first neural network declared in neural_network.py
+
+![A neural network with the topology 4-5-3-3](https://i.gyazo.com/239189a52dc30c5521015c525ccf6fd3.png)  
+The second network declared in neural_network.py  
+
+**Definition:**  
+> Artificial neural networks (ANN) or connectionist systems are computing systems that are inspired by, but not identical to, biological neural networks that constitute animal brains. Such systems "learn" to perform tasks by considering examples, generally without being programmed with task-specific rules.
+> -- [Wikipedia](https://en.wikipedia.org/wiki/Artificial_neural_network)
+
+**Problem solved using neural networks:**  Classifcation of iris flowers based on petal length and width as well as sepal length and width.
+
+
+**Accuracy:**  Both networks get a mean accuracy of around 0.9 to 1.0.
